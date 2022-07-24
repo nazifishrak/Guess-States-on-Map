@@ -13,7 +13,7 @@ total_questions = len(csv_data_frame.state)
 print(total_questions)
 state_list = csv_data_frame.state.to_list()
 while score < total_questions:
-    user_input = screen.textinput(title=f"US states game {score}/{total_questions}", prompt="Guess a state").capitalize()
+    user_input = screen.textinput(title=f"US states game {score}/{total_questions}", prompt="Guess a state").title()
 
     if  user_input in state_list and user_input not in guessed_states:
         guessed_states.append(user_input)
